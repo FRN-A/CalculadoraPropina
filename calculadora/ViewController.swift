@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var txtTotalSinPropina: UITextField!
+    @IBOutlet weak var sldPorcentajePropina: UISlider!
+    @IBOutlet weak var lblPorcentajePropina: UILabel!
+    @IBOutlet weak var lblPropina: UILabel!
+    @IBOutlet weak var lblTotalConPropina: UILabel!
+    
+    @IBAction func doChangeTotal(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
