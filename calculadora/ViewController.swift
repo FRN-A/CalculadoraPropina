@@ -17,7 +17,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblTotalConPropina: UILabel!
     
     @IBAction func doChangeTotal(_ sender: Any) {
+        
+        
+        var porcentajePropina = 0.0
+        porcentajePropina = Double(sldPorcentajePropina.value)
+        porcentajePropina.round()
+        lblPorcentajePropina.text = "\(porcentajePropina)%"
+        porcentajePropina = porcentajePropina / 100
+        
+        var cantidadPropina = 0.0
+        cantidadPropina = Double(txtTotalSinPropina.text!)! * porcentajePropina
+        
+        lblPropina.text = "$\(cantidadPropina)"
+        
+        let totalConPropina = Double(txtTotalSinPropina.text!)! + cantidadPropina
+        
+        lblTotalConPropina.text = "$\(totalConPropina)"
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
